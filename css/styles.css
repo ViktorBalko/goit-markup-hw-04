@@ -579,8 +579,8 @@ a {
 /* footer */
 
 .footer {
-  display: block;
-  width: 100%;
+  display: flex;
+  
 }
 
 .footer-logo {
@@ -812,24 +812,24 @@ a {
   height: 70px;
 }
 
-.mosaic-component:hover {
-  /* hover for link */
-  box-sizing: border-box;
+.mosaic-link {
+  display: block;
+}
+
+.mosaic-link:hover,
+.mosaic-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* .training-box {
-  flex-basis: calc(100% / 5);
+/* 
+.mosaic-component:hover {
+  
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 } */
 
-/* .training-box {
-  display: inline-flex;
-  width: calc(100% / 5 * 30px);
-  max-width: 500px;
-  padding-top: 272px;
-  padding-bottom: 206px;
-} */
 
 .clients-box {
   display: flex;
@@ -842,6 +842,7 @@ a {
 .clients-icon {
   width: 106px;
   height: 60px;
+  fill: var(--main-icon-color);
 }
 
 .clients-link {
@@ -851,10 +852,26 @@ a {
   width: 170px;
   height: 92px;
   border-radius: 4px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--main-icon-color);
 }
 
-.clients-link
+
+
+.clients-box li + li {
+  margin-left: 30px;
+} 
+
+
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--active-text-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--active-text-color);
+}
 
 /* .clients-item {
   display: inline-flex;
@@ -866,45 +883,51 @@ a {
   border-radius: 4px;
 } */
 
-.clients-icon:hover {
+/* .clients-icon:hover {
   fill: green;
 }
+ */
 
 /* .client-box {
   display: block;
 }
  */
 
+/* 
 .footer-box {
   display: block;
   align-items: center;
   justify-content: flex-start;
 }
+ */
 
 .footer-info-block {
   display: inline-block;
-  background-color: rgb(78, 5, 5);
   width: calc(100% / 4);
 }
 
 .footer-social-block h3 {
   margin-top: 0px;
   margin-bottom: 0px;
-}
+  padding-top: 72px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--white-color);
+} 
 
 .footer-social-block {
   display: inline-block;
-  background-color: #188ce8;
+  height: 252px;
   width: calc(100% / 4);
 }
 
 .footer-social {
-  display: inline-flex;
+  display: flex;
   padding-left: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 100px;
   padding-top: 0px;
-  margin-bottom: 100px;
-  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .footer-social .icon {
